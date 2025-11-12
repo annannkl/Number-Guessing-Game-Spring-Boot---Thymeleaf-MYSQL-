@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+    color: #eee;
+    padding-top: 40px;
+}
+
+.card {
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 6px 18px rgba(0, 255, 255, 0.2);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 255, 255, 0.4);
+}
+
+.btn-primary {
+    border-radius: 10px;
+    background-color: #00ffff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 6px 14px rgba(0, 255, 255, 0.3);
+    transition: transform .12s ease, background-color .2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0ff;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+    background-color: #0cc;
+}
+
+.alert {
+    border-radius: 10px;
+    background-color: rgba(255, 0, 255, 0.1);
+    color: #ff00ff;
+    border: 1px solid #ff00ff;
+}
+
+/* small input focus */
+.form-control:focus {
+    box-shadow: 0 6px 18px rgba(0, 255, 255, 0.4);
+    border-color: #0ff;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #00ffff;
+}
+
+/* Links */
+a {
+    color: #0ff;
+}
+
+a:hover {
+    color: #0cc;
+}
+
+/* Common page styling */
+.history-page, .leaderboard-page {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f0f0f0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    padding-top: 40px;
+}
+
+/* Table container as card */
+.history-page .card, .leaderboard-page .card {
+    background: rgba(255, 255, 255, 0.05); /* semi-transparent dark card */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-page .card:hover, .leaderboard-page .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* Table styling */
+.history-page table, .leaderboard-page table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.history-page th, .leaderboard-page th {
+    background: rgba(0, 0, 0, 0.4);
+    color: #00d1ff;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.history-page td, .leaderboard-page td {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.history-page tr:hover td, .leaderboard-page tr:hover td {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 209, 255, 0.3);
+}
+
+/* Button style */
+.history-page .btn, .leaderboard-page .btn {
+    border-radius: 10px;
+    transition: transform 0.12s ease;
+}
+
+.history-page .btn:hover, .leaderboard-page .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Make sure this only affects the history page */
+.history-page .table {
+    margin: 0 auto; /* Center the table horizontally */
+    width: 90%;     /* Optional: keep table responsive */
+}
+
+/* Center text in all table headers (<th>) */
+.history-page .table th {
+    text-align: center;      /* Center horizontally */
+    vertical-align: middle;  /* Center vertically */
+    font-weight: 600;        /* Make headers a bit bolder */
+}
+
+/* Center text in all table cells (<td>) */
+.history-page .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Optional: add a nice contrast to header */
+.history-page .table thead th {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* Optional: Style the card for better centering */
+.history-page .card {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Optional: Center the back-to-home button area */
+.history-page .text-center.mt-3 {
+    text-align: center;
+}
+
+/* Center text in all table header and table data cells */
+.table th,
+.table td {
+    text-align: center;   /* Centers text horizontally */
+    vertical-align: middle; /* Centers text vertically */
+}
+
+/* Optional: Make the table itself centered in the page */
+.table {
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+/* Optional aesthetic improvements */
+.table th {
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Leaderboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
+</head>
+<body class="leaderboard-page">
+<div class="container py-5">
+    <h2 class="mb-4 text-center">🏆 Leaderboard - Top Players</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-borderless align-middle table-hover text-white">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Player</th>
+                    <th>Attempts</th>
+                    <th>Finished At</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="game, iterStat : ${topGames}"
+                    th:classappend="${iterStat.count <= 3} ? 'table-warning text-dark fw-bold' : ''">
+                    <td>
+                        <span th:text="${iterStat.count}"></span>
+                        <span th:if="${iterStat.count == 1}">🏆</span>
+                        <span th:if="${iterStat.count == 2}">🥈</span>
+                        <span th:if="${iterStat.count == 3}">🥉</span>
+                    </td>
+                    <td th:text="${game.player.name}"></td>
+                    <td th:text="${game.attempts}"></td>
+                    <td th:text="${#dates.format(game.finishedAt, 'dd/MM/yyyy HH:mm')}"></td>
+                </tr>
+                <tr th:if="${#lists.isEmpty(topGames)}">
+                    <td colspan="4" class="text-center text-muted">No top players yet.</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="text-center mt-3">
+                <a href="/" class="btn btn-outline-primary">🏠 Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
