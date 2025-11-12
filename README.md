@@ -8,7 +8,7 @@ Users can view their personal game history and see how they rank on the leaderbo
 # Setup Instructions :
 ## Requirements :
 
-1. Java JDK 17+
+1. Java JDK 25
 2. Maven
 3. WAMP or XAMPP (for MySQL database)
 4. IDE such as IntelliJ IDEA or Eclipse
