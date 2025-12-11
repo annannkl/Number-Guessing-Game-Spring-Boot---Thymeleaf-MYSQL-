@@ -19,6 +19,15 @@
                         <strong th:text="${session.playerName}">Player</strong>
                         <small class="text-muted ms-2">| Attempts: <span th:text="${game.attempts}">0</span></small>
                     </div>
+
+                    <div>
+                        <a href="/leaderboard" class="btn btn-outline-primary">Leaderboard</a>
+                    </div>
+
+                    <div>
+                        <a href="/history" class="btn btn-outline-primary">History</a>
+                    </div>
+
                     <form action="/new" method="post" style="margin:0;">
                         <button class="btn btn-outline-secondary btn-sm" type="submit">New Game</button>
                     </form>
