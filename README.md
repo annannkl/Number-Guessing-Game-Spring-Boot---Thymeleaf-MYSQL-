@@ -16,7 +16,7 @@ Users can view their personal game history and see how they rank on the leaderbo
 ## Downloading Project
 Option A — Clone from GitHub
 
-1. git clone https://github.com/yourusername/guessgame.git](https://github.com/annannkl/Number-Guessing-Game-Spring-Boot---Thymeleaf-MYSQL-.git
+1. git clone https://github.com/annannkl/Number-Guessing-Game-Spring-Boot---Thymeleaf-MYSQL-.git
 2. cd guessgame
 
 Option B — Download ZIP
